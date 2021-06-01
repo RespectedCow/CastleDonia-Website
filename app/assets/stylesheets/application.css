@@ -13,3 +13,93 @@
  *= require_tree .
  *= require_self
  */
+
+ #new-post-button {
+    position: relative;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 5px;
+    top: 20px;
+    left: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: Arial;
+    font-size: 20px;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 100%;
+    width: 100%;
+  }
+  
+  .column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+  }
+
+footer {
+  height: 200px;
+  width: 100%;
+  display: block;
+  background: black;
+}
+footer a {
+  color: white;
+  font-size: medium;
+}
+body {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  font-family: Arial;
+  word-wrap: break-word;
+}
+
+.footer-text {
+  text-decoration: none;
+  color: darkgrey;
+}
+
+.formlabel {
+  font-size: 20px;
+  font-family: Arial;
+  top: 20px;
+  left: 20px;
+  position: relative;
+}
+
+#abouttext {
+  margin-top: 10px;
+  margin-left: 1200px;
+  font-size: 20px;
+  font-family: Arial;
+}
+
+#castledoniaimage {
+  background-image: url('castledoniaimage.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 50px;
+  margin-left: 500px;
+  background-size: 200px auto;
+  object-fit: cover;
+}
+
+.formheader {
+  font-family: Arial;
+  position: relative;
+  font-size: 25px;
+  padding: 10px;
+  top: 20px;
+  left: 20px;
+}
+  .posttext {
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    font-size: 20px;
+  }

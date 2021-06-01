@@ -1,0 +1,180 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.landingcontainer {
+    width: 100%;
+    height: 800px;
+    bottom: 10px;
+    right: 10px;
+}
+
+.landingimagecontainer {
+    background-image: url('indexhomelandingimage.PNG');
+    background-position: right center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 900px;
+    background-color: lightgrey;
+}
+
+#castledoniaimage {
+    background-image: url('castledoniaimage.png');
+    background-repeat: no-repeat;
+    margin-top: 10px;
+    margin-left: 300px;
+    width: 170px;
+    height: 170px;
+    object-fit: cover;
+}
+
+#abouttext {
+    position: relative;
+    margin-top: 10px;
+    margin-left: 1000px;
+    font-size: 20px;
+    font-family: Arial;
+  }
+
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    box-shadow: 10px 10px 5px grey;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 25px;
+}
+
+.footer-image>img {
+    width: 200px;
+    height: auto;
+}
+
+.footer-head {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.footer-hyperlink {
+    text-decoration: none;
+    color: darkgrey;
+}
+
+.footer-text {
+    text-decoration: none;
+    color: darkgrey;
+    font-size: 10px;
+}
+
+.footer-copyright {
+    margin-left: 100px;
+}
+
+.first-text-column {
+    margin-left: 20px;
+}
+
+.footer-hyperlink:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+.footer-copyright-row {
+    margin-top: 20px;
+}
+
+.footer-divider {
+    width: 90%;
+    height: 1px;
+    background-color: grey;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.align-self-center {
+    align-self: center!important;
+}
+
+.landingelementcontainer {
+    margin-left: 150px;
+    margin-right: 500px;
+    margin-top: 300px;
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+}
+
+.btn-support-button {
+    color: white;
+    background-color: red;
+    font-size: 30px;
+    width: 150px;
+}
+
+.first-footer {
+    margin-left: 50px;
+}
+
+.header {
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+p {
+    font-size: 20px;
+}
+
+.small {
+    font-size: 12px;
+}
+
+.btn-join-button {
+    color: white;
+    background-color: red;
+    font-size: 30px;
+    width: 150px;
+}
+
+.textcontainer {
+    position: relative;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    h1 {
+        text-align: center;
+        position: relative;
+        font-family: Arial;
+    }
+    p {
+        text-align: center;
+        position: relative;
+        font-family: Arial;
+    }
+}
+
+.featurescontainer {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    width: 50%;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+
+.divider {
+    position: relative;
+    width: 90%;
+    height: 2px;
+    background-color: red;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+}

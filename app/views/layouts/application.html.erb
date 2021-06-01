@@ -1,16 +1,53 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Mywebsite</title>
+    <title>Official CastleDonia Website</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= favicon_link_tag asset_path('castledoniaimage.png') %>
   </head>
 
   <body>
-    <%= yield %>
+    <header class='clearfix'>
+      <div class="navbar">
+        <%= link_to image_tag("castledoniatext.png", alt: "logo"), root_path, class: 'navbar-brand' %>
+        <%= link_to "Home", root_path %>
+      </div>
+    </header>
+    <main>
+      <%= yield %>
+    </main>
+    <footer>
+      <div class="row first-footer">
+        <div class="column">
+          <%= link_to image_tag("castledoniatext.png", alt: "logo"), root_path, class: 'footer-image' %>
+        </div>
+        <div class="column">
+          <h3 class="footer-head">FEATURES</h3>
+          <%= link_to "Home", home_index_path, class: "footer-hyperlink" %>
+          <%= link_to "About us", about_index_path, class: "footer-hyperlink" %>
+        </div>
+        <div class="column">
+          <h3 class="footer-head">JOIN OUR COMMUNITY</h3>
+          <%= link_to "Discord", "https://discord.gg/dg37UyhAwb", class: "footer-hyperlink" %>
+          <%= link_to "Become an archive moderator!", "https://discord.gg/dg37UyhAwb", class: "footer-hyperlink" %>
+        </div>
+        <div class="column">
+          <h3 class="footer-head">SOCIALS</h3>
+          <%= link_to "Twitter", "https://twitter.com/CowRespected", class: "footer-hyperlink" %>
+          <%= link_to "Instagram", "https://www.instagram.com/respectedcow/", class: "footer-hyperlink" %>
+        </div>
+      </div>
+      <div class="footer-divider footer-copyright-row"></div>
+      <div class="row ">
+        <div class="column">
+          <div class="footer-text footer-copyright">Copyright @2021 CastleDonia Team. All rights reserved </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
