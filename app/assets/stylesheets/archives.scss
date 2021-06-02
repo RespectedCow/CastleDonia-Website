@@ -1,0 +1,33 @@
+// Place all the styles related to the Archives controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.content {
+    height: 700px;
+    width: 50%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.posts-container {
+    overflow-y: scroll;
+    width: 90%;
+    height: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    border: 2px solid darkgrey;
+}
+
+#archive-text-column {
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.not-bold {
+    font-weight: 7px;
+}

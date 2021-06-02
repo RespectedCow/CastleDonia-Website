@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @archive.title %>
+</p>
+
+<p>
+  <strong>Health:</strong>
+  <%= @archive.health %>
+</p>
+
+<p>
+  <strong>Actionrate:</strong>
+  <%= @archive.actionrate %>
+</p>
+
+<p>
+  <strong>Damage:</strong>
+  <%= @archive.damage %>
+</p>
+
+<p>
+  <strong>Speed:</strong>
+  <%= @archive.speed %>
+</p>
+
+<p>
+  <strong>Defense:</strong>
+  <%= @archive.defense %>
+</p>
+
+<p>
+  <strong>Range:</strong>
+  <%= @archive.range %>
+</p>
+
+<p>
+  <strong>Troopdamage:</strong>
+  <%= @archive.troopDamage %>
+</p>
+
+<p>
+  <strong>Maxdist:</strong>
+  <%= @archive.maxDist %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @archive.description %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @archive.notes %>
+</p>
+
+<%= link_to 'Edit', edit_archive_path(@archive) %> |
+<%= link_to 'Back', archives_path %>

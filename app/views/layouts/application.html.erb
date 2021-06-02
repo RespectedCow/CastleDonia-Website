@@ -16,9 +16,18 @@
       <div class="navbar">
         <%= link_to image_tag("castledoniatext.png", alt: "logo"), root_path, class: 'navbar-brand' %>
         <%= link_to "Home", root_path %>
+        <% if user_signed_in? %>
+          <div id="username"><%= current_user.name %></div>
+          <div id="signout-button"><%= link_to "Log out", destroy_user_session_path, method: :delete %></div>
+        <% else %>
+          <div id="signup-button"><%= link_to "Signup", new_user_registration_path %></div>
+          <div id="login-button"><%= link_to "Login", new_user_session_path %></div>
+        <% end %>
       </div>
     </header>
     <main>
+      <div class="alert"><%= alert %></div>
+      <div class="notice"><%= notice %></div>
       <%= yield %>
     </main>
     <footer>

@@ -2,6 +2,7 @@ header {
     background: white;
     padding: 20px;
     position: sticky;
+    border-bottom: 1px solid darkgrey;
     a {
       text-decoration: none;
       font-weight: bold;
@@ -9,6 +10,70 @@ header {
     }
   }
   
+  #signup-button {
+    width: 150px;
+    height: 20px;
+    border-radius: .25rem;
+    border-style: solid;
+    border-color: blue;
+    border-width: 1px;
+    padding: 10px;
+    float: right;
+    text-align: center;
+    a {
+      text-decoration: none;
+      color: blue;
+      font-weight: 10px;
+      font-size: 17px;
+    }
+  }
+
+#username {
+  float: right;
+  font-size: 20px;
+  text-align: center;
+  font-weight: 10px;
+  color: black;
+}
+
+  #signout-button {
+    width: 150px;
+    height: 20px;
+    border-radius: .25rem;
+    border-style: solid;
+    border-color: blue;
+    border-width: 1px;
+    margin-right: 10px;
+    padding: 10px;
+    float: right;
+    text-align: center;
+    a {
+      text-decoration: none;
+      color: blue;
+      font-weight: 10px;
+      font-size: 17px;
+    }
+  }
+
+  #login-button {
+    width: 150px;
+    height: 20px;
+    border-radius: .25rem;
+    border-style: solid;
+    border-color: lightgreen;
+    border-width: 1px;
+    padding: 10px;
+    float: right;
+    text-align: center;
+    margin-right: 10px;
+    a {
+      text-decoration: none;
+      color: lightgreen;
+      font-weight: 10px;
+      font-size: 17px;
+    }
+  }
+
 .navbar a {
     font-size: 25px;
     font-family: Arial;

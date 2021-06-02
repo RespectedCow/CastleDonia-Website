@@ -1,0 +1,72 @@
+<%= form_with(model: archive) do |form| %>
+  <% if archive.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(archive.errors.count, "error") %> prohibited this archive from being saved:</h2>
+
+      <ul>
+        <% archive.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :health %>
+    <%= form.number_field :health %>
+  </div>
+
+  <div class="field">
+    <%= form.label :actionrate %>
+    <%= form.text_field :actionrate %>
+  </div>
+
+  <div class="field">
+    <%= form.label :damage %>
+    <%= form.number_field :damage %>
+  </div>
+
+  <div class="field">
+    <%= form.label :speed %>
+    <%= form.number_field :speed %>
+  </div>
+
+  <div class="field">
+    <%= form.label :defense %>
+    <%= form.number_field :defense %>
+  </div>
+
+  <div class="field">
+    <%= form.label :range %>
+    <%= form.number_field :range %>
+  </div>
+
+  <div class="field">
+    <%= form.label :troopDamage %>
+    <%= form.number_field :troopDamage %>
+  </div>
+
+  <div class="field">
+    <%= form.label :maxDist %>
+    <%= form.number_field :maxDist %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :notes %>
+    <%= form.text_area :notes %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
