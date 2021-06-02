@@ -1,4 +1,5 @@
 require "active_support/core_ext/integer/time"
+require 'openssl'
 
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
@@ -15,6 +16,18 @@ Rails.application.configure do
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
+
+  config.action_mailer.smtp_settings = {
+    address: "smtp.gmail.com",
+    port: 587,
+    domain: "castledonia.com",
+    authentication: "plain",
+    enable_starttls_auto: true,
+    user_name: ENV["GMAIL_USERNAME"],
+    password:ENV["GMAIL_PASSWORD"]
+  }
+
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 
   # Ensures that a master key has been made available in either ENV["RAILS_MASTER_KEY"]
   # or in config/master.key. This key is used to decrypt credentials (and other encrypted files).
