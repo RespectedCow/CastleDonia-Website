@@ -17,14 +17,20 @@ class ArchivesController < ApplicationController
 
   # GET /archives/1/edit
   def edit
+    @archive.troopImage.attach(params[:troopImage])
   end
 
   # POST /archives or /archives.json
   def create
     @archive = Archive.new(archive_params)
 
+    @archive.writer = current_user.name
+
+
+
     respond_to do |format|
       if @archive.save
+
         format.html { redirect_to @archive, notice: "Archive was successfully created." }
         format.json { render :show, status: :created, location: @archive }
       else
@@ -64,6 +70,6 @@ class ArchivesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def archive_params
-      params.require(:archive).permit(:title, :health, :actionrate, :damage, :speed, :defense, :range, :troopDamage, :maxDist, :description, :notes)
+      params.require(:archive).permit(:title, :health, :actionrate, :damage, :speed, :defense, :range, :troopDamage, :maxDist, :description, :notes, :writer, :troopImage)
     end
 end

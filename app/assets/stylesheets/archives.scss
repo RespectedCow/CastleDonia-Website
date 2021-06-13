@@ -3,9 +3,8 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 .content {
-    height: 700px;
+    height: 800px;
     width: 50%;
-    display: block;
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 50px;
@@ -30,4 +29,172 @@
 
 .not-bold {
     font-weight: 7px;
+}
+
+.entire-height {
+    height: 100%;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 100%;
+    width: 100%;
+  }
+  
+  .column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100px;
+    flex: 1;
+  }
+
+  .left-column {
+    flex-flow: column wrap;
+    flex-grow: 1;
+    height: 100%;
+    display: flex;
+  }
+
+.align-center {
+    margin-left: 50px;
+    margin-top: 150px;
+}
+
+.archive-troop-display {
+    width: 350px;
+    height: 100%;
+    background-color: snow;
+    border-right: 5px solid darkgrey;
+}
+
+.archive-image {
+    width: 200px;
+    height: 250px;
+    margin-top: 5px;
+}
+
+.archive-divider {
+    width: 80%;
+    height: 2px;
+    background-color: darkgrey;
+}
+
+.archive-troop-info-align-center {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+.archive-troop-info {
+    height: 100%;
+    flex-basis: 100%;
+    background-color: snow;
+    overflow-y: scroll;
+}
+
+.archive-row {
+    background-color: snow;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    flex-basis: 100%;
+    width: 100%;
+    border-bottom: 2px solid darkgrey;
+}
+
+.archive-column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+    .archive-title {
+        margin-left: 30px;
+        margin-top: 10px;
+        font-size: 20px;
+        a {
+            font-size: 20px;
+            text-decoration: none;
+            color: black;
+        }
+        a:hover {
+            text-decoration: underline;
+            color: black;
+        }
+    }
+    .archive-description {
+        margin-top: 5px;
+        margin-left: 30px;
+        font-size: 17px;
+    }
+    
+}
+
+.archive-writer  {
+    margin-left: 30px;
+    text-decoration: none;
+    font-size: 13px;
+    color: darkgrey;
+    a {
+        text-decoration: none;
+        font-size: 13px;
+        color: darkgrey;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+}
+
+.archive-buttons {
+    float: left;
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    margin-top: 30px;
+    margin-right: 10px;
+}
+.archive-buttons:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+.archive-troop-name {
+    text-decoration: none;
+    width: 150px;
+    text-align: center;
+    font-size: 20px;
+    margin-left: 20px;
+    border: 3px solid grey;
+    background-color: snow;
+}
+
+.table-column {
+    border: 2px solid black;
+    background-color: lightblue;
+    padding: 0;
+    margin: 0;
+}
+
+.table-row {
+    background-color: snow;
+    width: 100%;
+    height: 100px;
+}
+
+#new-archive-button {
+    width: 150px;
+    height: 30px;
+    border-radius: .25rem;
+    background-color: red;
+    a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 5px;
+        margin-left: 5px;
+        font-size: 22px;
+        font: Arial;
+    }
 }

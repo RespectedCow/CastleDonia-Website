@@ -1,59 +1,38 @@
-<p id="notice"><%= notice %></p>
+<div class="content">
+  <div class="row entire-height">
+    <div class="archive-troop-display">
+      <div class="align-center">
+        <div class="archive-troop-name"><%= @archive.title %></div>
+        <% if @archive.troopImage.attached? %>
+        <img src="<%=(url_for(@archive.troopImage))%>" alt="Image here", class="archive-image">
+        <% end %>
+      </div>
+    </div>
+    <div class="archive-troop-info">
+      <div class="archive-troop-info-align-center">
+        <h1>Description</h1>
+        <div class="archive-divider"></div>
+        <p><%= @archive.description %></p>
+        <h1>Stats</h1>
+        <div class="archive-divider"></div>
+        <p>Health: <%= @archive.health %></p>
+        <p>Attackrate/actionrate: <%= @archive.actionrate %></p>
+        <p>Damage: <%= @archive.damage %></p>
+        <p>Speed: <%= @archive.speed %></p>
+        <p>Defense: <%= @archive.defense %></p>
+        <p>Range: <%= @archive.range %></p>
+        <br>
+        <h1>Notes</h1>
+        <div class="archive-divider"></div>
+        <p><%= @archive.notes %></p>
+        <br>
+        <h1>Comments</h1>
+        <div class="archive-divider"></div>
+        <p>Bro do you know this is the first ever post? No, it is not.</p>
+        <div class="archive-writer">Created by <%= link_to @archive.writer, root_path %>. Created at <%= @archive.created_at %></div>
+      </div>
+    </div>
+  </div>
+  
+</div>
 
-<p>
-  <strong>Title:</strong>
-  <%= @archive.title %>
-</p>
-
-<p>
-  <strong>Health:</strong>
-  <%= @archive.health %>
-</p>
-
-<p>
-  <strong>Actionrate:</strong>
-  <%= @archive.actionrate %>
-</p>
-
-<p>
-  <strong>Damage:</strong>
-  <%= @archive.damage %>
-</p>
-
-<p>
-  <strong>Speed:</strong>
-  <%= @archive.speed %>
-</p>
-
-<p>
-  <strong>Defense:</strong>
-  <%= @archive.defense %>
-</p>
-
-<p>
-  <strong>Range:</strong>
-  <%= @archive.range %>
-</p>
-
-<p>
-  <strong>Troopdamage:</strong>
-  <%= @archive.troopDamage %>
-</p>
-
-<p>
-  <strong>Maxdist:</strong>
-  <%= @archive.maxDist %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @archive.description %>
-</p>
-
-<p>
-  <strong>Notes:</strong>
-  <%= @archive.notes %>
-</p>
-
-<%= link_to 'Edit', edit_archive_path(@archive) %> |
-<%= link_to 'Back', archives_path %>

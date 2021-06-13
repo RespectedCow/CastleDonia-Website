@@ -1,47 +1,33 @@
-<p id="notice"><%= notice %></p>
+<div class="content">
+  <div class="archive-text-column">
 
-<h1>Archives</h1>
+    <h1>Archives</h1>
+    
+    <p>Archive stores all troop information</p>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Health</th>
-      <th>Actionrate</th>
-      <th>Damage</th>
-      <th>Speed</th>
-      <th>Defense</th>
-      <th>Range</th>
-      <th>Troopdamage</th>
-      <th>Maxdist</th>
-      <th>Description</th>
-      <th>Notes</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @archives.each do |archive| %>
-      <tr>
-        <td><%= archive.title %></td>
-        <td><%= archive.health %></td>
-        <td><%= archive.actionrate %></td>
-        <td><%= archive.damage %></td>
-        <td><%= archive.speed %></td>
-        <td><%= archive.defense %></td>
-        <td><%= archive.range %></td>
-        <td><%= archive.troopDamage %></td>
-        <td><%= archive.maxDist %></td>
-        <td><%= archive.description %></td>
-        <td><%= archive.notes %></td>
-        <td><%= link_to 'Show', archive %></td>
-        <td><%= link_to 'Edit', edit_archive_path(archive) %></td>
-        <td><%= link_to 'Destroy', archive, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+    <%if current_user %>
+      <% if current_user.admin === true %>
+        <div id="new-archive-button"><%= link_to 'New Archive', new_archive_path %></div>
+      <% end %>
     <% end %>
-  </tbody>
-</table>
+  </div>
 
-<br>
+  <div class="posts-container">
+        <% @archives.each do |archive| %>
+          <div class="archive-row">
+            <div class="archive-column">
+              <div class="archive-title"><%= link_to archive.title, archive %></div>
+              <div class="archive-description"><%= truncate(archive.description, :length => 35) %></div>
+              <div class="archive-writer">Created by <%= link_to archive.writer, root_path %></div>              
+            </div>
+            <div><%= link_to 'Show', archive, class: 'archive-buttons' %></div>
+            <% if current_user && current_user.admin %>
+              <div><%= link_to 'Edit', edit_archive_path(archive), class: 'archive-buttons' %></div>
+              <div><%= link_to 'Destroy', archive, method: :delete, data: { confirm: 'Are you sure?' }, class:'archive-buttons' %></div>
+            <% end %>
+          </div>
+      <% end %>
+  </div>
+  <br>
+</div>
 
-<%= link_to 'New Archive', new_archive_path %>

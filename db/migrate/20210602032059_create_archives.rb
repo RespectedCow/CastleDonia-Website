@@ -8,8 +8,6 @@ class CreateArchives < ActiveRecord::Migration[6.1]
       t.integer :speed
       t.integer :defense
       t.integer :range
-      t.integer :troopDamage
-      t.integer :maxDist
       t.text :description
       t.text :notes
       t.string :writer

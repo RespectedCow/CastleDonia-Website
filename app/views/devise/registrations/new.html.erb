@@ -16,6 +16,11 @@
       </div>
 
       <div class="field">
+        <%= f.label "Profile avatar" %><br />
+        <%= f.file_field :avatar %>
+      </div>
+
+      <div class="field">
         <%= f.label :email %><br />
         <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
       </div>

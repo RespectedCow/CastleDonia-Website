@@ -8,8 +8,6 @@ one:
   speed: 1
   defense: 1
   range: 1
-  troopDamage: 1
-  maxDist: 1
   description: MyText
   notes: MyText
 
@@ -21,7 +19,5 @@ two:
   speed: 1
   defense: 1
   range: 1
-  troopDamage: 1
-  maxDist: 1
   description: MyText
   notes: MyText

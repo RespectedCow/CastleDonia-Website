@@ -22,6 +22,11 @@
   </div>
 
   <div class="field">
+    <%= form.label "Troop Image" %>
+    <%= form.file_field :troopImage %>
+  </div>
+
+  <div class="field">
     <%= form.label :actionrate %>
     <%= form.text_field :actionrate %>
   </div>
@@ -47,16 +52,6 @@
   </div>
 
   <div class="field">
-    <%= form.label :troopDamage %>
-    <%= form.number_field :troopDamage %>
-  </div>
-
-  <div class="field">
-    <%= form.label :maxDist %>
-    <%= form.number_field :maxDist %>
-  </div>
-
-  <div class="field">
     <%= form.label :description %>
     <%= form.text_area :description %>
   </div>
@@ -68,5 +63,6 @@
 
   <div class="actions">
     <%= form.submit %>
+    <%= archive.writer = current_user.name %>
   </div>
 <% end %>
